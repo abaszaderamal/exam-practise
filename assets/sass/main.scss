@@ -3,14 +3,12 @@
 
 // Core files
 @import "core/core";
-@import "core/fonts.scss";
+@import "core/fonts";
 
-// // Components
-// @import "components/all";
 
 // Layout
 @import "layout/header";
 @import "layout/footer";
 
-// // Pages
-// @import "pages/all";
+// Pages
+@import "pages/hero";

@@ -1,0 +1,33 @@
+.header{
+    width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    .navbar{
+       
+        img{
+            color: $orange;
+            width: 187px;
+        }
+        
+        .collapse{
+            .navbar-nav{
+                font-family:$montserrat;
+                .nav-item{
+                    padding-right: 0.5rem;
+                    padding-left: 0.5rem;
+                    .nav-link{
+                        color: #fff;
+                        letter-spacing: 0.0625em;
+                        transition: .3s all;
+                        &:hover{
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
