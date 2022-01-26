@@ -1,0 +1,106 @@
+.portfolio{
+    background-color: #F8F9FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    text-align: center;
+    &__content{
+        &__title{
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+            font-family: $montserrat;
+        }
+        &__info{
+            font-size: 1rem;
+            font-weight: 400;
+            font-style: italic;
+            font-family:$roboto;
+            margin-bottom: 4rem;
+            color: #6c757d;
+        }
+    }
+
+    &__item{
+        &__link{
+            position: relative;
+            display: block;
+            $self:&;
+
+            &:hover{
+                #{$self}__caption{
+                    opacity: 1;
+                }
+            }
+
+            &__caption{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: transparentize($orange , $amount: 0.1);
+                opacity: 0;
+                transition: all .3s;
+
+                &__content{
+                    i {
+                        font-size: 52px;
+                        color: #fff;
+                    }
+                }
+            }
+            
+
+        }
+        &__content {
+            padding: 24px;
+            background-color: #fff;
+
+            &__title {
+                font-size: 1.5rem;
+                font-family: $montserrat;
+                font-weight: bold;
+            }
+
+            &__description {
+                color: #6c757d;
+                font-style: italic;
+                font-size: 16px;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:990px) {
+    .portfolio__content__title {
+        font-size: 2.0rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+.modal{
+    .btn{
+        background-color: $orange;
+        color: white;
+        font-weight: 600;
+    };
+
+    .portfolio-modal-title{
+        font-size:3rem;
+        font-weight: 700;
+        color: $dark;
+    }
+    &-body{
+        img{
+            border-radius:10px;
+        }
+    }
+
+}
