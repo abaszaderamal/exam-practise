@@ -1,0 +1,262 @@
+﻿   @model HomeViewModel
+
+    <main>
+        <section class="hero" id="hero" style="background-image: url(/assets/image/header-bg.jpg);">
+            <div class="container">
+                <div class="hero__content text-center">
+                    <h2 class="hero__content__welcome">Welcome To Our Studio!</h2>
+                    <h1 class="hero__content__title">IT'S NICE TO MEET YOU</h1>
+                    <button class="hero__content__btn">tell me more</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="services" id="services">
+        <div class="container">
+
+            <div class="services__content">
+                <h2 class="services__content__title">
+                    SERVICES
+                </h2>
+                <h2 class="services__content__info">
+                    Lorem ipsum dolor sit amet consectetur.
+                </h2>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4 mb-5">
+                    <div class="services__card shadow">
+                        <div class="services__card__iconbox">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+
+                        <h2 class="services__card__title">
+                            E-Commerce
+                        </h2>
+                        <p class="services__card__info text-center">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-5">
+                    <div class="services__card shadow">
+                        <div class="services__card__iconbox">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+
+                        <h2 class="services__card__title">
+                            E-Commerce
+                        </h2>
+                        <p class="services__card__info text-center">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-5">
+                    <div class="services__card shadow">
+                        <div class="services__card__iconbox">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+
+                        <h2 class="services__card__title">
+                            E-Commerce
+                        </h2>
+                        <p class="services__card__info text-center">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="portfolio__content text-center">
+                <h2 class="portfolio__content__title">portfolio</h2>
+                <p class="portfolio__content__info">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="row">
+                @foreach (var portfolio in Model.Portfolios)
+                {
+                    <div class=" col-lg-4 mb-3">
+                        <div class="portfolio__item">
+                            <a href="#" class="portfolio__item__link" data-toggle="modal" data-target="#portfolioModal-@portfolio.Id">
+                                <div class="portfolio__item__link__caption">
+                                    <div class="portfolio__item__link__caption__content">
+                                        <i class="fas fa-plus"></i>
+                                    </div>
+                                </div>
+                                <img class="img-fluid" src="~/assets/image/@portfolio.Image" alt="">
+                            </a>
+                        </div>
+                        <div class="portfolio__item__content">
+                            <h4 class="portfolio__item__content__title">@portfolio.Title</h4>
+                            <h5 class="portfolio__item__content__description">@portfolio.Info</h5>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="portfolioModal-@portfolio.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <i class="fas fa-times "></i>
+                                    </button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <h2 class="portfolio-modal-title text-uppercase mb-5">@portfolio.Title</h2>
+                                    <img src="~/assets/image/@portfolio.Image" class="mb-5" alt="">
+                                    <p class="mb-4">
+                                        @portfolio.Info;
+                                    </p>
+
+                                    <div class="modal-button mt-5">
+                                        <button type="button" class="btn__yellow btn btn-secondary border-0 " data-dismiss="modal">
+                                            <i class="fas fa-times"></i>
+                                            Close Window
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="team" id="team">
+        <div class="container">
+            <div class="team__content text-center">
+                <h2 class="team__content__title">
+                    OUR AMAZING TEAM
+                </h2>
+                <h3 class="team__content__info">
+                    Lorem ipsum dolor sit amet consectetur.
+                </h3>
+            </div>
+
+            <div class="team__item">
+                <div class="row">
+                    <div class="col-lg-4 mb-5">
+                        <div class="team__item__card">
+                            <div class="team__item__card__img ">
+                                <img class="img-fluid" src="~/assets/image/1.jpg" alt="">
+                            </div>
+
+                            <h2 class="team__item__card__title">
+                                Parveen Anand
+                            </h2>
+                            <p class="team__item__card__info">
+                                Lead Designer
+                            </p>
+
+                            <div class="team__item__card__icon">
+
+                                <div class="team__item__card__icon__iconbox">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+
+                                <div class="team__item__card__icon__iconbox">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+
+                                <div class="team__item__card__icon__iconbox">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-5">
+                        <div class="team__item__card">
+                            <div class="team__item__card__img ">
+                                <img class="img-fluid" src="~/assets/image/1.jpg" alt="">
+                            </div>
+
+                            <h2 class="team__item__card__title">
+                                Parveen Anand
+                            </h2>
+                            <p class="team__item__card__info">
+                                Lead Designer
+                            </p>
+
+                            <div class="team__item__card__icon">
+
+                                <div class="team__item__card__icon__iconbox">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+
+                                <div class="team__item__card__icon__iconbox">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+
+                                <div class="team__item__card__icon__iconbox">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-5">
+                        <div class="team__item__card">
+                            <div class="team__item__card__img ">
+                                <img class="img-fluid" src="~/assets/image/1.jpg" alt="">
+                            </div>
+
+                            <h2 class="team__item__card__title">
+                                Parveen Anand
+                            </h2>
+                            <p class="team__item__card__info">
+                                Lead Designer
+                            </p>
+
+                            <div class="team__item__card__icon">
+
+                                <div class="team__item__card__icon__iconbox">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+
+                                <div class="team__item__card__icon__iconbox">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+
+                                <div class="team__item__card__icon__iconbox">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="team__footer d-flex justify-content-center align-items-center">
+                <p class="team__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    
+

@@ -1,0 +1,17 @@
+// Abstract files
+@import "abstracts/variables";
+
+// Core files
+@import "core/core";
+@import "core/fonts";
+
+
+// Layout
+@import "layout/header";
+@import "layout/footer";
+
+// Pages
+@import "pages/hero";
+@import "pages/portfolio";
+@import "pages/services";
+@import "pages/team";

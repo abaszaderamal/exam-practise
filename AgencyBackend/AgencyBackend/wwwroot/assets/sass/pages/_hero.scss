@@ -1,0 +1,48 @@
+.hero{
+    width: 100%;
+    height: 75vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+
+
+    &__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 75vh;
+    
+        &__welcome{
+            color: #fff;
+            font-size: 2.25rem;
+            font-style: italic;
+            line-height: 2.25rem;
+            margin-bottom: 2rem;
+            font-family: $roboto;
+        }
+
+        &__title{
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 4.5rem;
+            margin-bottom: 4rem;
+            font-family: $montserrat;
+            color: #fff;
+        }
+
+        &__btn{
+            width: 224px;
+            height: 69px;
+            background-color: #FFC800;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: $montserrat;
+            font-weight: 600;
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+﻿@model Portfolio
+
+
+<div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Create Portfolio</h4>
+            
+            <form class="forms-sample" asp-action="Create" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Title"></label>
+                    <input asp-for="Title" style="height:44px" class="form-control" placeholder="Username">
+                </div>
+
+                <span class="text-danger d-block my-2" asp-validation-for="Title"></span>
+
+                <div class="form-group">
+                    <label asp-for="Photo"></label>
+                    <input asp-for="Photo" style="height:44px" class="form-control" accept="image/*">
+                </div>
+
+                <span class="text-danger d-block my-2" asp-validation-for="Photo"></span>
+
+                <div class="form-group">
+                    <label asp-for="Info">Password</label>
+                    <input asp-for="Info" style="height:44px" class="form-control" placeholder="Info">
+                </div>
+
+                <span class="text-danger d-block my-2" asp-validation-for="Info"></span>
+
+
+                <button type="submit" class="btn btn-primary me-2">Save</button>
+                <button class="btn btn-warning">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
